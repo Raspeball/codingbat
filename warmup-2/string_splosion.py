@@ -7,11 +7,7 @@ def string_splosion(string):
     res = ""
 
     for ind, val in enumerate(string):
-        if ind == 0:
-            res = res + val
-
-        else:
-            res = res + string[:ind+1]
+        res = res + string[:ind+1]
 
     return res
 
