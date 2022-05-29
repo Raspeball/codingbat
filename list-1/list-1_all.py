@@ -1,5 +1,5 @@
-## https://codingbat.com/python/String-1 ##
-# all string-1 problems in one file #
+## https://codingbat.com/python/List-1 ##
+# all list-1 problems in one file #
 #
 #
 #
