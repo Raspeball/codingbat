@@ -8,8 +8,8 @@ between 61 and 80 inclusive, the result is 1. If speed is 81 or more,
 the result is 2. Unless it is your birthday -- on that day, your speed can be
 5 higher in all cases.'''
 
-import math
-
+# this produces correct results for all codingbat runs
+# but codingbat does not agree
 def caught_speeding(speed, is_birthday):
     ticket = 1
     low, high = 61, 81
@@ -18,10 +18,13 @@ def caught_speeding(speed, is_birthday):
         speed = speed - 5
 
     if speed not in range(low, high):
-        #ticket += int(math.ceil((speed-low)/high))
         ticket += int(((speed - low)/high) - 1) + 1
 
     return ticket
 
-test = caught_speeding(85, False)
-print(test)
+# DV solution
+def caught_speeding(speed, is_birthday):
+    if is_birthday:
+        speed = speed -5
+
+    return (speed > 60) + (speed > 80)
