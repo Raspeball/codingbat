@@ -13,14 +13,12 @@ def make_chocolate(small, big, goal):
     res = goal
 
     if goal // big < 5:
-        #res = res - (big - 1)*5
         res = goal%5
 
     else:
         res = res - big*5
 
     if res > small:
-        return -1
+        res = -1
 
-    else:
-        return res
+    return res
