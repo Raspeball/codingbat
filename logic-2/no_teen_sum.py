@@ -15,7 +15,8 @@ def no_teen_sum(a, b, c):
 
     nums = [a, b, c]
 
-    return sum([fix_teen(i) for i in nums])
+    #return sum([fix_teen(i) for i in nums])
+    return sum(fix_teen(i) for i in nums)
 
 
 def fix_teen(n):
@@ -23,3 +24,6 @@ def fix_teen(n):
         return 0
 
     else: return n
+
+test = no_teen_sum(13, 15, 29)
+print(test)

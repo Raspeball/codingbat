@@ -75,13 +75,28 @@ starting with a 6 and extending to the next 7 (every 6 will be followed by at
 least one 7). Return 0 for no numbers.'''
 
 def sum67(nums):
+
+    s = 0
+
     if len(nums) < 1:
-        s = 0
+        return s
+
     else:
-        s = 0
-        do_not_add = False
-        i = 0
-        while i < len(nums):
-            if nums[i] == 6:
-                do_not_add = True
-            
+        add = True
+        for ele in nums:
+            if ele == 6:
+                add = False
+            if add:
+                s += ele
+            if ele == 7:
+                add = True
+        return s
+
+    # This is a working solution with while-loop
+    #else:
+    #    res = nums
+    #    while 6 in res:
+    #        del res[res.index(6):res.index(7, res.index(6))+1]
+    #    s = sum(res)
+
+    return s
