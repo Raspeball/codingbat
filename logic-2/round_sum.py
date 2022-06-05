@@ -10,3 +10,16 @@ Given 3 ints, a b c, return the sum of their rounded values.
 To avoid code repetition, write a separate helper "def round10(num):"
 and call it 3 times.
 Write the helper entirely below and at the same indent level as round_sum().'''
+
+def round_sum(a, b, c):
+
+    rounded = map(round10, [a, b, c])
+
+    return sum(rounded)
+
+def round10(num):
+    if num % 10 >= 5:
+        return (num//10 + 1)*10
+
+    else:
+        return (num//10)*10
