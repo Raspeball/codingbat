@@ -100,3 +100,20 @@ def sum67(nums):
     #    s = sum(res)
 
     return s
+#
+#
+#
+# has22#
+'''Given an array of ints,
+return True if the array contains a 2 next to a 2 somewhere.'''
+
+def has22(nums):
+    is22 = False
+    for i, val in enumerate(nums):
+        if val == 2 and i != len(nums) - 1:
+            if nums[i+1] == 2:
+                is22 = True
+        else:
+            continue
+
+    return is22
